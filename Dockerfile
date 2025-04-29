@@ -37,8 +37,8 @@ RUN apt-get update && apt-get install -y ninja-build \
 # Ora copia il resto del codice (non invalida il caching delle dipendenze)
 COPY . /app
 
-RUN pip install -e ".[all]"
-RUN pip install pycuda
+RUN pip install -e ".[tensorrt]" --extra-index-url https://pypi.nvidia.com
+
 
 
 # Installa le dipendenze aggiuntive richieste
