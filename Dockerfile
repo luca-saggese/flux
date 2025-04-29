@@ -62,8 +62,8 @@ ENV HF_HOME=/huggingface
 #RUN source patchtransformers.sh
 
 # Espone la porta per Gradio
-EXPOSE 8080
+EXPOSE 7860
 
 # Comando di default per avviare il server Gradio
-CMD ["python3", "demo_gr.py", "--name", "flux-schnell","--device","cuda", "--share", "--port", "8080"]
+CMD ["python3", "demo_gr.py", "--name", "flux-schnell","--device","cuda", "--share"]
 #python demo_gr.py --name flux-schnell --device cuda --share --port 8080
