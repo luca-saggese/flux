@@ -38,6 +38,8 @@ RUN apt-get update && apt-get install -y ninja-build \
 COPY . /app
 
 RUN pip install -e ".[all]"
+RUN pip install pycuda
+
 
 # Installa le dipendenze aggiuntive richieste
 #RUN pip install gradio==4.0.2 sentencepiece
@@ -63,3 +65,4 @@ EXPOSE 8080
 
 # Comando di default per avviare il server Gradio
 CMD ["python3", "demo_gr.py", "--name", "flux-schnell","--device","cuda", "--share", "--port", "8080"]
+#python demo_gr.py --name flux-schnell --device cuda --share --port 8080
