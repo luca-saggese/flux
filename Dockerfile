@@ -1,5 +1,5 @@
 # Usa un'immagine di base con Python 3.10
-FROM nvidia/cuda:12.2.0-devel-ubuntu22.04
+FROM nvidia/cuda:12.4.1-devel-ubuntu22.04
 
 # Imposta il maintainer
 LABEL maintainer="Andrea"
